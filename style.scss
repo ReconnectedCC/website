@@ -15,7 +15,7 @@
   }
 @mixin flex-center-hv { display: flex; justify-content: center; align-items: center; }
 /* /////////////////////////////////////////////////////////////////// */
-html { font: 12pt 'Monocraft'; }
+html { font: 1rem 'Monocraft'; }
 body {
 	height: 100vh;
 	@include flex-center-hv;
