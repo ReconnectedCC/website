@@ -17,7 +17,7 @@
 }
 /* /////////////////////////////////////////////////////////////////// */
 html {
-  font: 12pt "Monocraft";
+  font: 1rem "Monocraft";
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #fff;
-  background-image: url("bg.webp");
+  background-image: url("backgrounds/compressed/2.avif");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -124,9 +124,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   background: #999 url("bgbtn.webp") center/cover;
   image-rendering: pixelated;
   border: 2px solid #000;
@@ -176,4 +174,6 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
