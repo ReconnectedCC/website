@@ -39,6 +39,12 @@ body {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
+@media (max-width: 600px) {
+  .mc-menu {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Minecraft Style Button */
 .mc-button {
@@ -110,6 +116,13 @@ body {
   background: rgba(34, 34, 34, 0.9333333333);
   padding: 50px;
   margin: 50px;
+}
+@media (max-width: 600px) {
+  .modal {
+    padding: 20px;
+    margin: 20px;
+    width: 90vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,7 +18,6 @@
 html { font: 1rem 'Monocraft'; }
 
 body {
-	
 	@include flex-center-hv;
 	flex-direction: column;
 	background-color: #111;
@@ -35,6 +34,10 @@ body {
 	grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 	// Double button
+	@media (max-width: 600px) {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
 }
 
 /* Minecraft Style Button */
@@ -99,4 +102,9 @@ body {
 	background: #222E;
 	padding:50px;
 	margin:50px;
+	@media (max-width: 600px) {
+		padding: 20px;
+		margin:  20px;
+		width:90vw;
+	}
 }
