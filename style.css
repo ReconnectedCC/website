@@ -130,6 +130,11 @@ body {
   background: rgba(17, 17, 17, 0.9333333333);
   padding: 50px;
   margin: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%);
 }
 @media (max-width: 600px) {
   .modal {
