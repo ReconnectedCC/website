@@ -1,6 +1,6 @@
 body {
 	background-color: #fff;
-	background-image: url('backgrounds/compressed/1-blur-more.webp');
+	background: #111 url('backgrounds/compressed/1-blur-more.webp');
 	background-size: cover;
 	background-position: center;
 }
