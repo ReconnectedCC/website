@@ -86,6 +86,7 @@ body {
 
 .logo {
 	width: 700px;
+	aspect-ratio: 1730 / 440;
 	@media (max-width: 700px) {
 		width: 80%
 	}
