@@ -155,7 +155,7 @@ body {
 }
 @media (max-width: 600px) {
   .center {
-    gap: 20px;
+    gap: 10px;
   }
 }
 
