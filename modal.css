@@ -1,6 +1,6 @@
 body {
 	background: #111 url('backgrounds/compressed/1-blur-more.webp');
-	background-size: auto 100vw;
+	background-size: auto auto;
 	background-position: center;
 	height: 100vh;
 }

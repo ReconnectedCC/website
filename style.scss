@@ -131,7 +131,7 @@ body {
     height: 80px; 
 }
 
-.center > a {
+.center > a { // links in the center element (buttons on modals)
 	width: 200px;
 	@media (max-width: 600px) {
 		width:150px;
