@@ -21,13 +21,11 @@ html {
 }
 
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
-  background-image: url("backgrounds/compressed/2.avif");
+  background-color: #111;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -37,83 +35,14 @@ body {
 .mc-menu {
   --btn-size: 2.5em;
   display: grid;
-  grid-template-columns: var(--btn-size) calc(var(--btn-size) * 10) var(--btn-size);
-  grid-template-rows: auto repeat(4, var(--btn-size)) auto var(--btn-size);
-  grid-template-areas: ".      logo        ." ". 		first 		." ". 		second 		." ".		third		." "lang fourth 		.";
   gap: 0.5rem;
-}
-.mc-menu .logo {
-  grid-area: logo;
-  width: 100%;
-}
-.mc-menu .mc-button:nth-child(2) {
-  grid-area: first;
-}
-.mc-menu .mc-button:nth-child(3) {
-  grid-area: second;
-}
-.mc-menu .double {
-  grid-area: third;
-  width: 100%;
-  height: 100%;
-  display: grid;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left right";
-  grid-gap: 8px;
-}
-.mc-menu .double .mc-button:nth-child(1) {
-  grid-area: left;
-}
-.mc-menu .double .mc-button:nth-child(2) {
-  grid-area: right;
-}
-.mc-menu .double2 {
-  grid-area: fourth;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left right";
-  grid-gap: 8px;
-}
-.mc-menu .double2 .mc-button:nth-child(1) {
-  grid-area: left;
-}
-.mc-menu .double2 .mc-button:nth-child(2) {
-  grid-area: right;
-}
-.mc-menu .lang {
-  grid-area: lang;
 }
 @media (max-width: 600px) {
   .mc-menu {
-    grid-template-rows: auto repeat(6, var(--btn-size)) auto var(--btn-size);
-    grid-template-areas: ".      logo        ." ". 		first 		." ". 		second 		." ".		third		." ".      fourth 		." ".      fifth       ." ". sixth ." ". lang .";
-  }
-  .mc-menu .double {
-    display: contents;
-    grid-gap: 100px;
-  }
-  .mc-menu .double .mc-button:nth-child(1) {
-    grid-area: third;
-  }
-  .mc-menu .double .mc-button:nth-child(2) {
-    grid-area: fourth;
-  }
-  .mc-menu .double2 {
-    display: contents;
-    grid-gap: 100px;
-  }
-  .mc-menu .double2 .mc-button:nth-child(1) {
-    grid-area: fifth;
-  }
-  .mc-menu .double2 .mc-button:nth-child(2) {
-    grid-area: sixth;
-  }
-  .mc-menu .lang {
-    grid-area: lang;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -125,14 +54,20 @@ body {
   overflow: hidden;
   white-space: nowrap;
   user-select: none;
-  background: #999 url("bgbtn.webp") center/cover;
+  padding: 20px;
+  text-decoration: none;
+  color: #DDD;
+  background: #2b2b2b;
+  text-align: center;
   image-rendering: pixelated;
-  border: 2px solid #000;
+  border-radius: 5px;
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   /* Mouse over */
   /* Button title */
   /* Others */
 }
-.mc-button:hover .title {
+.mc-button:hover {
   background-color: rgba(100, 100, 255, 0.45);
   text-shadow: 2px 2px rgba(32, 32, 19, 0.8);
   color: #FFFFA0;
@@ -163,17 +98,78 @@ body {
   padding-bottom: 0;
 }
 
-:modal {
-  color: white;
-  background: url("dirt.webp") center/cover;
-  background-color: beige;
-  border: 2px solid black;
+.logo {
+  width: 700px;
+  aspect-ratio: 1730/440;
+  margin: 30px;
+  display: block;
+}
+@media (max-width: 700px) {
+  .logo {
+    width: 80%;
+  }
+}
+
+.highlight {
+  border-color: #dad668;
+  border-style: solid;
+  border-width: 5px;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+}
+.highlight:hover {
+  background-color: rgba(218, 214, 104, 0.2666666667);
+  color: #FFFFA0;
+}
+
+.modal {
   border-radius: 5px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem;
+  color: #DDD;
+  background: rgba(17, 17, 17, 0.9333333333);
+  padding: 50px;
+  margin: 50px;
+}
+@media (max-width: 600px) {
+  .modal {
+    padding: 20px 40px;
+    margin: 20px;
+    width: 90vw;
+  }
+}
+
+.floater {
+  float: left;
+  height: 50%;
+  margin-bottom: 10%;
+}
+
+.center {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 80px;
+}
+@media (max-width: 600px) {
+  .center {
+    gap: 10px;
+  }
+}
+
+.center > a {
+  width: 200px;
+}
+@media (max-width: 600px) {
+  .center > a {
+    width: 150px;
+  }
+}
+
+ul {
+  padding-inline-start: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,12 +16,11 @@
 @mixin flex-center-hv { display: flex; justify-content: center; align-items: center; }
 /* /////////////////////////////////////////////////////////////////// */
 html { font: 1rem 'Monocraft'; }
+
 body {
-	height: 100vh;
 	@include flex-center-hv;
 	flex-direction: column;
-	background-color: #fff;
-	background-image: url('backgrounds/compressed/2.avif');
+	background-color: #111;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -30,70 +29,15 @@ body {
 .mc-menu {
 	--btn-size: 2.5em;
 	display: grid;
-	grid-template-columns: var(--btn-size) calc(var(--btn-size) * 10) var(--btn-size);
-	grid-template-rows: auto repeat(4, var(--btn-size)) auto var(--btn-size);
-	grid-template-areas:
-    '.      logo        .'
-	'. 		first 		.'
-	'. 		second 		.'
-    '.		third		.'
-	'lang fourth 		.'
-	;
 	gap: 0.5rem;
-    & .logo { grid-area: logo;
-    width: 100%; }
-	& .mc-button:nth-child(2) { grid-area: first;	}
-	& .mc-button:nth-child(3) { grid-area: second;	}
+
+	grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 	// Double button
-	& .double {
-        grid-area: third;
-        & .mc-button:nth-child(1) { grid-area: left; }
-		& .mc-button:nth-child(2) { grid-area: right; }
-		width: 100%; height: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-template-areas: 'left right';
-		grid-gap: 8px;
+	@media (max-width: 600px) {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
 	}
-    & .double2 {
-		grid-area: fourth;
-		& .mc-button:nth-child(1) { grid-area: left; }
-		& .mc-button:nth-child(2) { grid-area: right; }
-        width: 100%; height: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-template-areas: 'left right';
-		grid-gap: 8px;
-    }
-	& .lang { grid-area: lang; }
-    @media (max-width: 600px) {
-        grid-template-rows: auto repeat(6, var(--btn-size)) auto var(--btn-size);
-        grid-template-areas:
-        '.      logo        .'
-        '. 		first 		.'
-        '. 		second 		.'
-        '.		third		.'
-        '.      fourth 		.'
-        '.      fifth       .'
-        '. sixth .'
-        '. lang .'
-        ;
-        & .double {
-            display:contents;
-            & .mc-button:nth-child(1) { grid-area: third; }
-            & .mc-button:nth-child(2) { grid-area: fourth; }
-            grid-gap: 100px;
-        }
-        & .double2 {
-            display:contents;
-            & .mc-button:nth-child(1) { grid-area: fifth; }
-            & .mc-button:nth-child(2) { grid-area: sixth; }
-            grid-gap: 100px;
-        }
-        & .lang { grid-area: lang; }
-    }
 }
 
 /* Minecraft Style Button */
@@ -104,13 +48,18 @@ body {
 	overflow: hidden;
 	white-space: nowrap;
 	user-select: none;
-
-	background: #999 url('bgbtn.webp') center / cover;
+	padding: 20px;
+	text-decoration: none;
+	color: #DDD;
+	background: #2b2b2b;
+	text-align: center;
 	image-rendering: pixelated;
-	border: 2px solid #000;
+	border-radius: 5px;
+	transition: 0.5s;
+	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 	
 	/* Mouse over */
-	&:hover .title {
+	&:hover {
 		background-color: rgba(100, 100, 255, .45);
 		text-shadow: 2px 2px #202013CC;
 		color: #FFFFA0;
@@ -135,15 +84,69 @@ body {
 		& .title  { padding-bottom: 0; } }
 }
 
-:modal {
-    color: white;
-    background: url('dirt.webp') center / cover;
-    background-color: beige;
-    border: 2px solid black;
-    border-radius: 5px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2rem;
+.logo {
+	width: 700px;
+	aspect-ratio: 1730 / 440;
+	@media (max-width: 700px) {
+		width: 80%
+	}
+	margin: 30px;
+	display: block;
+}
+
+.highlight {	
+	border-color: #dad668;
+	border-style: solid;
+	border-width: 5px;
+	padding:20px;
+	width: 50%;
+	margin: auto;
+	justify-content: center;
+	&:hover {
+		background-color: #dad66844;
+
+		color: #FFFFA0;
+	}
+}
+
+.modal {
+	border-radius: 5px;
+	color: #DDD;
+	background: #111E;
+	padding: 50px;
+	margin: 50px;
+	@media (max-width: 600px) {
+		padding: 20px 40px;
+		margin:  20px;
+		width: 90vw;
+	}
+}
+
+.floater {
+	float: left; 
+	height: 50%; 
+	margin-bottom: 10%;
   }
+
+.center {
+	display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center; 
+    gap: 40px; 
+    height: 80px; 
+	@media (max-width: 600px) {
+		gap: 10px;
+	}
+}
+
+.center > a { // links in the center element (buttons on modals)
+	width: 200px;
+	@media (max-width: 600px) {
+		width:150px;
+	}
+}
+
+ul {
+	padding-inline-start: 30px;
+}

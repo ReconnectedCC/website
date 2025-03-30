@@ -1,0 +1,8 @@
+body {
+	height: 100vh;
+	flex-direction: column;
+	background: #111 url('backgrounds/compressed/2-blur.webp');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
