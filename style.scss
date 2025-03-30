@@ -113,14 +113,20 @@ body {
 	border-radius: 5px;
 	color: #DDD;
 	background: #111E;
-	padding:50px;
-	margin:50px;
+	padding: 50px;
+	margin: 50px;
 	@media (max-width: 600px) {
 		padding: 20px 40px;
 		margin:  20px;
 		width: 90vw;
 	}
 }
+
+.floater {
+	float: left; 
+	height: 50%; 
+	margin-bottom: 10%;
+  }
 
 .center {
 	display: grid;

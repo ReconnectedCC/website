@@ -139,6 +139,12 @@ body {
   }
 }
 
+.floater {
+  float: left;
+  height: 50%;
+  margin-bottom: 10%;
+}
+
 .center {
   display: grid;
   grid-template-columns: repeat(2, auto);
