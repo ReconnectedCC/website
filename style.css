@@ -56,7 +56,7 @@ body {
   user-select: none;
   padding: 20px;
   text-decoration: none;
-  color: white;
+  color: #DDD;
   background: #2b2b2b;
   text-align: center;
   image-rendering: pixelated;
@@ -125,7 +125,7 @@ body {
 
 .modal {
   border-radius: 5px;
-  color: white;
+  color: #DDD;
   background: rgba(17, 17, 17, 0.9333333333);
   padding: 50px;
   margin: 50px;
