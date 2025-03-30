@@ -85,7 +85,12 @@ body {
 }
 
 .logo {
-	width: 50%;
+	width: 700px;
+	@media (max-width: 700px) {
+		width: 80%
+	}
+	margin: 30px;
+	display: block;
 }
 
 .highlight {	
