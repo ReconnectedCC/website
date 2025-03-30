@@ -135,6 +135,9 @@ body {
     align-items: center; 
     gap: 40px; 
     height: 80px; 
+	@media (max-width: 600px) {
+		gap: 20px;
+	}
 }
 
 .center > a { // links in the center element (buttons on modals)
