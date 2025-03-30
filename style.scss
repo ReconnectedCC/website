@@ -99,12 +99,28 @@ body {
 .modal {
 	border-radius: 5px;
 	color: #FFFF;
-	background: #222E;
+	background: #111E;
 	padding:50px;
 	margin:50px;
 	@media (max-width: 600px) {
 		padding: 20px;
 		margin:  20px;
-		width:90vw;
+		width: 90vw;
+	}
+}
+
+.center {
+	display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center; 
+    gap: 40px; 
+    height: 80px; 
+}
+
+.center > a {
+	width: 200px;
+	@media (max-width: 600px) {
+		width:150px;
 	}
 }
