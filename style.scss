@@ -55,9 +55,11 @@ body {
 	text-align: center;
 	image-rendering: pixelated;
 	border-radius: 5px;
+	transition: 0.5s;
+	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 	
 	/* Mouse over */
-	&:hover .title {
+	&:hover {
 		background-color: rgba(100, 100, 255, .45);
 		text-shadow: 2px 2px #202013CC;
 		color: #FFFFA0;
