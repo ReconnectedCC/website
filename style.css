@@ -111,6 +111,10 @@ body {
   margin: auto;
   justify-content: center;
 }
+.highlight:hover {
+  background-color: rgba(218, 214, 104, 0.2666666667);
+  color: #FFFFA0;
+}
 
 .modal {
   border-radius: 5px;

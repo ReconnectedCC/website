@@ -96,6 +96,11 @@ body {
 	width: 50%;
 	margin: auto;
 	justify-content: center;
+	&:hover {
+		background-color: #dad66844;
+
+		color: #FFFFA0;
+	}
 }
 
 .modal {
