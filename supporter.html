@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support ReconnectedCC</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="long-modal.css">
     <link rel="preload" href="Monocraft.woff2" as="font">
     <meta name="description" content="Support ReconnectedCC">
 </head>
@@ -31,11 +31,30 @@
         </p>
         <p>By clicking Next, you will be redirected to our Stripe Checkout page where you can specify the Minecraft Username and acquire Supporter perks</p>
         <br>
+        <script async
+            src="https://js.stripe.com/v3/buy-button.js">
+        </script>
+        <div class="center">
+            <stripe-buy-button
+            buy-button-id="buy_btn_1PuxOsGeivjKTWjPNP5D3VLz"
+            publishable-key="pk_live_51Prn5ZGeivjKTWjPUTk8km8McseMnJTZqioPtlQ1430X1HZwl7PxFqbZ7p50pcHHW0DZmJAzl6MghK4nsfOspFhZ006opGDMXK"
+            ></stripe-buy-button>
+        </div>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <noscript>
+            <div class="center">
+                <a href="https://buy.stripe.com/8wMeVb76QcMB2UU9AA" class="highlight mc-button">Donate</a>
+            </div>
+        </noscript>
         <div class="center">
             <a href="index.html" class="mc-button">Back</a>
-          <a href="https://buy.stripe.com/8wMeVb76QcMB2UU9AA" class="highlight mc-button">Donate</a>
         </div>
     </div>
     
