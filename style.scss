@@ -27,7 +27,7 @@ body {
 }
 /* Minecraft Style Menu */
 .mc-menu {
-	--btn-size: 2.5em;
+	--btn-size: 4em;
 	display: grid;
 	gap: 0.5rem;
 
@@ -78,7 +78,7 @@ body {
 		box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
 	}
 	/* Others */
-	&.full { width: 100%; height: 100%; }
+	&.full { width: 100%; }
 	&.lang {
 		& img { width: 26px; height: 26px;}
 		& .title  { padding-bottom: 0; } }
